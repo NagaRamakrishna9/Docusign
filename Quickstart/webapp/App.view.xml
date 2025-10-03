@@ -1,0 +1,60 @@
+<mvc:View
+    controllerName="ui5.quickstart.App"
+    displayBlock="true"
+    xmlns="sap.m"
+     xmlns:unified="sap.ui.unified"
+    xmlns:mvc="sap.ui.core.mvc">
+
+    <App id="app">
+        <!-- Login Page -->
+        <Page id="loginPage" title="Login" backgroundDesign="Solid">
+            <content>
+                <VBox class="sapUiSmallMargin sapUiContentPadding"
+                      alignItems="Center"
+                      justifyContent="Center">
+
+                    <Image src="images/logo.png" width="100px" densityAware="false" class="sapUiSmallMarginBottom"/>
+                    <Title text="Login Page" level="H2" class="sapUiSmallMarginBottom"/>
+                    <Input id="usernameInput" placeholder="User Name" width="100%"/>
+                    <Input id="passwordInput" placeholder="Password" type="Password" width="100%" class="sapUiSmallMarginTop"/>
+                    <Button text="Login" type="Emphasized" width="100%" press=".onLogin" class="sapUiMediumMarginTop"/>
+                </VBox>
+            </content>
+        </Page>
+
+        <!-- Home Page -->
+        <Page id="homePage" title="Home" backgroundDesign="Solid">
+            <headerContent>
+                <Button text="Logout" press=".onLogout" type="Transparent"/>
+            </headerContent>
+            <content>
+                <VBox class="sapUiSmallMargin sapUiContentPadding">
+                    <Title text="Welcome to the Home Page!" level="H1"/>
+                    <Text text="This is your main application content."/>
+                     <unified:FileUploader
+        id="fileUploader"
+        name="myFileUpload"
+        width="100%"
+        placeholder="Choose a file..."
+        buttonText="Browse"
+        fileType="jpg,png,pdf,docx,xlsx"
+        change=".onFileChange"
+        uploadComplete=".onUploadComplete"/>
+                </VBox>
+                <VBox class="sapUiSmallMargin sapUiContentPadding">
+                    <Title text="Welcome to the Home Page!" level="H1"/>
+                    <Text text="This is your main application content."/>
+                     <unified:FileUploader
+        id="fileUploaderWithSign"
+        name="myFileUpload"
+        width="100%"
+        placeholder="Choose a file..."
+        buttonText="Browse"
+        fileType="jpg,png,pdf,docx,xlsx"
+        change=".onFileChangeSignature"
+        uploadComplete=".onUploadCompleted"/>
+                </VBox>
+            </content>
+        </Page>
+    </App>
+</mvc:View>
