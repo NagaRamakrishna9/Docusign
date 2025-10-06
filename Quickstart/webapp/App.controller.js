@@ -115,7 +115,7 @@ sap.ui.define([
                             "documentBase64": base64Data,
                             "documentName": oFile.name,
                             "recipientName": "pdf",
-                            "recipientEmail": "apoorva@inflexiontechfze.com"
+                            "recipientEmail": "ska@inflexiontechfze.com"
                         }
 
                 $.ajax({
